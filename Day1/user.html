@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form id="regForm">
+<h2>firstname</h2>
+<input type="text" name="firstname" id="firstname"/>
+
+
+<h2>lastname</h2>
+<input type="lastname" name="lastname" id="lastname"/>
+
+<p id="demo"></p>
+<input type="submit" name="submit_it" onclick="myFunction('sdf')">
+
+<script>
+    function myFunction(data) {
+        var firstname =  document.getElementById("firstname").value;
+        console.log("firstname " + firstname);
+        
+console.log(
+    "DAta ::" + data
+);
+
+        var lastname =  document.getElementById("lastname").value;
+        console.log("lastname " + lastname);
+        
+        if(firstname === "" || lastname === "" )
+        {
+        console.log("NOT Ok");
+        document.getElementById("demo").innerHTML ="NOT OK";
+       document.getElementById("regForm").action ="login_failed.html";
+
+        }else{
+        console.log("OK");
+        document.getElementById("demo").innerHTML ="OK";
+       document.getElementById("regForm").action ="login_succes.html";
+
+       }
+    }
+
+    
+        
+        
+</script>
+</body>
+</html> 

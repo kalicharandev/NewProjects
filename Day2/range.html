@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>marks</h2>
+<h2>Chemistry</h2>
+<input type="range" id="chemistry" oninput="cheRange()">
+<input type="text" id="chemistry_text">
+<h2>Mathematics</h2>
+<input type="range" id="mathematics" oninput="matRange()">
+<input type="text" id="maths_text">
+<h2>Physics</h2>
+<input type="range" id="physics" oninput="phyRange()">
+<input type="text" id="physics_text">
+<h2>ComputerScience</h2>
+<input type="range" id="computerscience" oninput="comRange()">
+<input type="text" id="computer_text">
+ <h2>English</h2>
+<input type="range" id="english" oninput="engRange()">
+<input type="text" id="english_text">
+
+<script>
+
+
+
+//range.oninput = function() {
+   //output.innerHTML = this.value;
+  //chemistry_text.value = this.value;
+//}
+
+function cheRange()
+{
+var range = document.getElementById("chemistry");
+//var output = document.getElementById("demo");
+var chemistry_text = document.getElementById("chemistry_text"); 
+//output.innerHTML = range.value;
+chemistry_text.value = range.value;
+}
+function matRange()
+{
+var math = document.getElementById("mathematics");
+var maths_text = document.getElementById("maths_text");
+maths_text.value = math.value;
+}
+function phyRange()
+{
+var phys = document.getElementById("physics");
+var physics_text = document.getElementById("physics_text");
+physics_text.value = phys.value;
+}
+function comRange()
+{
+var comp = document.getElementById("computerscience");
+var computer_text = document.getElementById("computer_text");
+computer_text.value = comp.value;
+}
+function engRange()
+{
+var engl = document.getElementById("english");
+var english_text = document.getElementById("english_text");
+english_text.value = engl.value;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function pageLoad(){
+            console.log("page load");
+            const urlParams = new URLSearchParams(location.search);
+
+            for (const [key, value] of urlParams) {
+                console.log(`${key}:${value}`);
+            }
+
+            const firstName = urlParams.get('firstname')
+            console.log("FirstName :::" + firstName);
+
+            const lastName = urlParams.get('lastname')
+            console.log("lastName :::" + lastName);
+
+            document.getElementById("name").innerHTML = "firstName:" + firstName + " " +  "lastName:" + lastName;
+
+        }
+            
+
+
+           
+        
+
+        </script>
+    </head>
+<body onload="pageLoad()">
+    <h2>login successfull</h2>
+    <p id="name"></p>
+    
+</body>
+
+</html>
