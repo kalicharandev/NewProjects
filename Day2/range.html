@@ -17,8 +17,9 @@
 <input type="text" id="computer_text">
  <h2>English</h2>
 <input type="range" id="english" oninput="engRange()">
-<input type="text" id="english_text">
-
+<input type="text" id="english_text"><br><br>
+<button type="submit" onclick="calFunction()">calculate</button>
+<p id="calculate"></p>
 <script>
 
 
@@ -27,7 +28,11 @@
    //output.innerHTML = this.value;
   //chemistry_text.value = this.value;
 //}
-
+let chemi_value;
+let maths_value;   //global variable
+let phys_value;
+let computer_value;
+let english_value;
 function cheRange()
 {
 var range = document.getElementById("chemistry");
@@ -35,30 +40,41 @@ var range = document.getElementById("chemistry");
 var chemistry_text = document.getElementById("chemistry_text"); 
 //output.innerHTML = range.value;
 chemistry_text.value = range.value;
+chemi_value = range.value;
 }
 function matRange()
 {
 var math = document.getElementById("mathematics");
 var maths_text = document.getElementById("maths_text");
 maths_text.value = math.value;
+maths_value = math.value;
 }
 function phyRange()
 {
 var phys = document.getElementById("physics");
 var physics_text = document.getElementById("physics_text");
 physics_text.value = phys.value;
+phys_value = phys.value;
 }
 function comRange()
 {
 var comp = document.getElementById("computerscience");
 var computer_text = document.getElementById("computer_text");
 computer_text.value = comp.value;
+computer_value = comp.value;
 }
 function engRange()
 {
 var engl = document.getElementById("english");
 var english_text = document.getElementById("english_text");
 english_text.value = engl.value;
+english_value  = engl.value;
+}
+function calFunction()
+{
+  var calculator = parseInt(chemi_value) +  parseInt(maths_value)  + parseInt(phys_value) +  parseInt(computer_value) +  parseInt(english_value);
+
+  document.getElementById("calculate").innerHTML = calculator;
 }
 </script>
 
