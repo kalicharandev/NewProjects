@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checkboxes</h2>
+
+
+<input type="checkbox" id="car" value="I have a BMW" oninput="myCar()">
+<label for="car"> CAR</label><br>
+<input type="text" id="cars_text"><br>
+<input type="checkbox" id="bike" value="I have a duke" oninput="myBike()">
+<label for="bike">BIKE</label><br>
+<input type="text" id="bike_text"><br>
+<input type="checkbox" id="van" value="I have a Audi" oninput="myVan()">
+<label for="van">VAN</label><br>
+<input type="text" id="van_text"><br><br>
+<button type="submit" onclick="myVechicle()">submit</button>
+<p id="this_vechicle"></p>
+<script>
+  let car_value;
+  let bike_value;
+  let van_value;
+
+  function myCar()
+  {
+    let vechicles = document.getElementById("car");
+    let cars_text = document.getElementById("cars_text");
+    cars_text.value = vechicles.value;
+    car_value = vechicles.value
+
+    
+  }
+  function myBike()
+  {
+    let vechicle = document.getElementById("bike");
+    let bike_text = document.getElementById("bike_text");
+    bike_text.value = vechicle.value;
+    bike_value = vechicle.value
+    
+  }
+  function myVan()
+  {
+    let vec = document.getElementById("van");
+    let van_text = document.getElementById("van_text");
+    van_text.value = vec.value;
+    van_value = vec.value;
+   
+    
+  }
+  function myVechicle(){
+    document.getElementById("this_vechicle").innerHTML = car_value  + "<br/>" + bike_value + "<br/>" + van_value;
+  }
+</script>
+
+</body>
+</html>
+
