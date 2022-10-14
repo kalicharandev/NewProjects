@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2>Checkboxes</h2>
-
-
-<input type="checkbox" id="car" value="I have a BMW" oninput="myCar()">
-<label for="car"> CAR</label><br>
-<input type="text" id="cars_text"><br>
-<input type="checkbox" id="bike" value="I have a duke" oninput="myBike()">
-<label for="bike">BIKE</label><br>
-<input type="text" id="bike_text"><br>
-<input type="checkbox" id="van" value="I have a Audi" oninput="myVan()">
-<label for="van">VAN</label><br>
-<input type="text" id="van_text"><br><br>
-<button type="submit" onclick="myvehicle()">submit</button>
-<p id="this_vehicle"></p>
-<script>
-  let car_value = "";
+alert("hi");
+let car_value = "";
   let bike_value = "";
   let van_value = "";
 
@@ -73,8 +55,3 @@ document.getElementById("this_vehicle").innerHTML = vehicle_value;
   //  document.getElementById("this_vehicle").innerHTML = car_value  + "<br/>" + bike_value + "<br/>" + van_value;
   }
   
-</script>
-
-</body>
-</html>
-
