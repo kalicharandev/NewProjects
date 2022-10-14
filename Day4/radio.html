@@ -1,0 +1,100 @@
+<!--
+    this file remove the global varaiable and add the checked function in the main function uses radio button
+-->
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Please select your age:</p>
+    <input type="radio" id="boy" name="gender" value="male" oninput="boyGend()">
+    <label for="boy">male</label>
+    <input type="text" id="boy_txt"><br>
+    <input type="radio" id="girl" name="gender" value="female" oninput="girlGend()">
+  <label for="girl">female</label>  
+  <input type="text" id="girl_txt"><br>
+
+  <input type="radio" id="trans" name="gender" value="others" oninput="transGend()">
+  <label for="trans">others</label>
+  <input type="text" id="trans_txt"><br><br>
+  <button type ="submit" onclick="myGender()">submit</button>
+  <p id="gender_id"></p>
+  <script>
+    let boy_value = "";
+    let girl_value = "";
+    let trans_value = "";
+    function boyGend(){
+        let boys = document.getElementById("boy");
+        let boy_txt = document.getElementById("boy_txt");
+        boy_txt.value = boy.value;
+        boy_value = boy.value;
+       
+        let girl_txt = document.getElementById("girl_txt");
+        girl_txt.value = "";
+        let trans_txt= document.getElementById("trans_txt");
+        trans_txt.value = "";
+
+}
+function girlGend(){
+    let girls = document.getElementById("girl");
+    let girl_txt = document.getElementById("girl_txt");
+    girl_txt.value = girls.value;
+     girl_value = girls.value;
+
+
+     let boy_txt = document.getElementById("boy_txt");
+        boy_txt.value = "";
+        let trans_txt= document.getElementById("trans_txt");
+        trans_txt.value = "";
+}
+
+function transGend(){
+    let transgends = document.getElementById("trans");
+    let trans_txt= document.getElementById("trans_txt");
+    trans_txt.value = transgends.value;
+     trans_value = transgends.value;
+
+
+     let boy_text= document.getElementById("boy_txt");
+     boy_text.value = "";
+     let girl_txt = document.getElementById("girl_txt");
+        girl_txt.value = "";
+        
+}
+
+
+function myGender(){
+    console.log("myGender");
+    let genderValue = "";
+    let boyElement = document.getElementById("boy");
+    console.log("boy" + boyElement.checked);
+    console.log("boy" + boyElement.value);
+
+    if(boyElement.checked){
+        genderValue += boyElement.value;
+        console.log("genderValue" + genderValue);
+    }
+
+    let girlElement = document.getElementById("girl");
+    console.log("girl" + girlElement.checked);
+    console.log("girl" + girlElement.value);
+
+    if(girlElement.checked){
+        genderValue += girlElement.value;
+        console.log("gendervalue" + genderValue);
+    }
+    let transElement = document.getElementById("trans");
+    console.log("trans" + transElement.checked);
+    console.log("trans" + transElement.value);
+
+    if(transElement.checked){
+        genderValue += transElement.value;
+        console.log("gendervalue" + genderValue);
+    }
+ 
+    document.getElementById("gender_id").innerHTML = genderValue;
+
+}
+
+  </script>
+
+
+
