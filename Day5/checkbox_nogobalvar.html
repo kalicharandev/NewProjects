@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+this  files using by checked function...
+-->
+
+<h2>Checkboxes</h2>
+
+
+<input type="checkbox" id="reddish" value="redrose" oninput="myRed()">
+<label for="reddish">red</label><br>
+<input type="text" id="reddish_text"><br>
+<input type="checkbox" id="darkblue" value="bluemoon" oninput="myBlue()">
+<label for="darkblue">blue</label><br>
+<input type="text" id="darkblue_text"><br>
+<input type="checkbox" id="yellowish" value="yellowcar" oninput="myYellow()">
+<label for="yellowish">yellow</label><br>
+<input type="text" id="yellowish_text"><br><br>
+<button type="submit" onclick="myColors()">submit</button>
+<p id="this_color"></p>
+
+
+<script>
+    function myRed(){
+        let colours = document.getElementById("reddish");
+        let reddish_text = document.getElementById("reddish_text");
+        
+        
+        if(colours.checked){
+            reddish_text.value += colours.value;
+            console.log("colours" + reddish_text.value);
+            
+        }else{
+            reddish_text.value = " ";
+            console.log(reddish_text.checked);
+        }
+    }
+    function myBlue(){
+        let colour = document.getElementById("darkblue");
+        let darkblue_text = document.getElementById("darkblue_text");
+        if (colour.checked){
+            darkblue_text.value += colour.value;
+            console.log("colours" + darkblue_text.value);
+        }else{
+            darkblue_text.value = "";
+            console.log(darkblue_text.checked);
+        }
+    }
+    function myYellow(){
+        let color = document.getElementById("yellowish");
+        let yellowish_text = document.getElementById("yellowish_text");
+        if(color.checked){
+            yellowish_text.value += color.value;
+            console.log("colours" + yellowish_text.value);
+            
+        }else{
+            yellowish_text.value = " ";
+            console.log(yellowish_text.checked);
+        }   
+     }
+    
+    function myColors(){
+        let colorvalue =" ";
+        let redElement = document.getElementById("reddish");
+         console.log("colourvalue" + redElement.checked);
+         console.log("colourvalue" + redElement.value);
+       
+         if(redElement.checked){
+            colorvalue += redElement.value;
+            console.log("colourvalue" + colorvalue);
+        }
+       
+         
+         let blueElement = document.getElementById("darkblue");
+         console.log("colourvalue" + blueElement.checked);
+         console.log("colourvalue" + blueElement.value);
+
+         if(blueElement.checked){
+            colorvalue +="<br>" + blueElement.value;
+            console.log("colourvalue" + colorvalue);
+         }
+         let yellowElement = document.getElementById("yellowish");
+         console.log("colourvalue" + yellowElement.checked);
+         console.log("colourvalue" + yellowElement.value);
+
+         if(yellowElement.checked){
+            colorvalue += "<br>"  + yellowElement.value;
+            console.log("colourvalue" + colorvalue);
+         }
+           document.getElementById("this_color").innerHTML = colorvalue;
+
+    }
+</script>
+</body>
+</html>
