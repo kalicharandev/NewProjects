@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function getJsonData(){
+        const date = document.getElementById("json_txt").value;
+       console.log(date);
+        const obj = JSON.parse(date);
+        console.log(obj);
+        
+        document.getElementById("name_id").innerHTML = obj.name;
+        document.getElementById("birth_id").innerHTML = obj.birth;
+        document.getElementById("city_id").innerHTML = obj.city;
+
+            }
+        </script>
+    </head>
+    <body>
+        <label for="json_txt">json data</label><br>
+
+        <input type="text" id="json_txt"><br><br>
+        <button type="submit" onclick="getJsonData()">Check_It</button>
+        <p id="name_id"></p>
+        <p id="birth_id"></p>
+        <p id="city_id"></p>
+
+    </body>
+</html>
+
+        
