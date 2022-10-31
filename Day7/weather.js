@@ -5,7 +5,7 @@ const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
 /*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
-const apiKey = "0cfbe861962ff493a631aed3b2c22ffb";
+const apiKey = "4d8fb5b93d4af21d66a2948710284366";
 
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -52,7 +52,9 @@ form.addEventListener("submit", e => {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      const { main, name, sys, weather } = data;
+      console.log("jsondata" + JSON.stringify(data));
+      const { main, name, sys, weather, coord } = data;
+      console.log("main" + JSON.stringify(main));
       const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
         weather[0]["icon"]
       }.svg`;
@@ -62,6 +64,7 @@ form.addEventListener("submit", e => {
       const markup = `
         <h2 class="city-name" data-name="${name},${sys.country}">
           <span>${name}</span>
+          
           <sup>${sys.country}</sup>
         </h2>
         <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
@@ -70,7 +73,12 @@ form.addEventListener("submit", e => {
         weather[0]["description"]
       }">
           <figcaption>${weather[0]["description"]}</figcaption>
-        </figure>
+          </figure>
+          <div class="weather-info">
+          <span> lon:${coord.lon}</span>
+          <span> lat:${coord.lat}</span>
+
+          </div>
       `;
       li.innerHTML = markup;
       list.appendChild(li);

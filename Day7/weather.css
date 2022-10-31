@@ -50,7 +50,7 @@ ul {
 
 body {
   font: 1rem/1.3 "Roboto", sans-serif;
-  background: var(--darkred);
+  background: var(--darkred);  
   color: var(--text_dark);
   padding: 70px;
 }
@@ -101,7 +101,7 @@ body {
   margin-left: 15px;
   border-radius: 5px;
   background: var(--text_med);
-  transition: background 0.3s ease-in-out;
+  transition: backgr ound 0.3s ease-in-out;
 }
 
 .top-banner form button:hover {
@@ -179,6 +179,12 @@ body {
   width: 100px;
   height: 100px;
 }
+.ajax-section .weather-info {
+  margin-top: 15px;
+  width: 100px;
+  text-transform:lowercase;
+}
+
 
 
 /* FOOTER
