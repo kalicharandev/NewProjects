@@ -1,6 +1,6 @@
 function getDetails(){
     document.getElementById('output').style.display="block";
-   const name=document.getElementById('username').value;
+   const name=document.getElementById('username').value;    
    console.log("name" +name);
     fetch(`https://api.github.com/users/${name}`)
     .then(response=>response.json().then(data=>{
