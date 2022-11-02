@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="">
+    <script src="REST_api.js"  type="text/javascript"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Profile Fetch Api</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-area">
+            <input type="text" name="" id="username" placeholder="Enter Github Username" autocomplete="off">
+            <button onclick="getRepos();">Get Details</button>
+        </div>
+        <div class="output-container" id="output">
+            <div class="name" id="name"></div>
+            <div class="repos">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
