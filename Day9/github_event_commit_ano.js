@@ -1,8 +1,8 @@
-function getEventCommit(){
+function anotherEventCommit(){
     document.getElementById('eventCommit').style.display="block";
-   const userCommit = document.getElementById('username').value;    
-   console.log("name" + userCommit);
-    fetch(`https://api.github.com/users/${userCommit}/events/public`)
+   const anotherCommit = document.getElementById('username').value;    
+   console.log("name" + anotherCommit);
+    fetch(`https://api.github.com/users/${anotherCommit}/events/public`)
     .then(response=>response.json()
         .then(data=>{
          
@@ -11,22 +11,29 @@ function getEventCommit(){
 
         for(let i = 0; i < data.length; i++){
 
-          const {commits} = data[i].payload;
+         const {actor, payload} = data[i];
+
+         const {commits} = payload;
+         
+         
 
         for (let j = 0; j < commits.length; j++) {
            
                       console.log(commits[j]);
 
-         let author =
+                      
+
+        
           githubEventCommit += ` <div class="output-container" id="output" style="display: block;">
                                 <div class="profile" id="profile">
-                                    <img src="${data[i].actor.avatar_url}">
+                                    <img src="${actor.avatar_url}">
                                 </div>
                                 <div class="reponame">
                                     <h1 id="name">${commits[j].sha}</h1>
                                 </div>
                                 <div class="bio">
-                                   <p id="bio">${commits[j].author.name}</p>
+                                   <p id="bio">${commits[j].author.name}<br>
+                                 ${commits[j].author.email}</p>
                                </div>
                                <div class="info">
                                    <ul>
