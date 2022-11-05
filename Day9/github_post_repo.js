@@ -1,10 +1,9 @@
   function reposPost(){
-    document.getElementById('eventCommit').style.display="block";
-   const anotherCommit = document.getElementById('username').value;    
-   console.log("name" + anotherCommit);
+     const repoistoryName = document.getElementById('RepositoryName').value;    
+   console.log("name" + repoistoryName);
 
    const params = {
-    "name": "My War",
+    "name": repoistoryName,
  "description": "This is your first repo created using API!",
  "homepage": "https://github.com",
  "private": false,
@@ -12,8 +11,8 @@
 }
 const options = {
     method: 'POST',
-    headers: {
-        "Authorization": "Bearer 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",
+    headers: {           
+        "Authorization": "Bearer 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",
         "Content-Type": "application/json"
       },
     body: JSON.stringify( params )  
@@ -24,7 +23,7 @@ fetch( 'https://api.github.com/user/repos', options)
         console.log("response" + response);
          
 
-          document.getElementById('eventCommit').innerHTML= "test";
+          document.getElementById('repositoryid').innerHTML= "passed";
           
         
     });
