@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>click demo</title>
+  <style>
+  
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+
+<label for ="fname">firstname</label><br>
+<input type="text"  id="fname"/><br>
+<label for ="lname">lastname</label><br>
+<input type="text"  id="lname"/><br>
+<input type="button" value="ClickMe" id="clickBtn"/>
+<p id ="fullName"></p>
+
+ 
+<script>
+
+
+$( "#clickBtn" ).click(function() {
+  let firstName = $('#fname').val();
+console.log(firstName);
+let lastName = $('#lname').val();
+console.log(lastName);
+$("#fullName").html = firstName + " " + lastName;
+console.log(firstName + " " + lastName);
+
+});
+
+</script>
+ 
+</body>
+</html>
+
+
