@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>login form</title>
+    <style>
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<div id="errorMessage"></div>
+<h2>username</h2>
+<input type="text" id="username" /><br>
+<p id="invalid_username">
+<h2>password</h2>
+<input type="password" id="password" /><br>
+<p id="invalid_password"></p>
+<p id="demo"></p>
+<input type="button" value="submit" id="btnclick">
+<script>
+    $("#btnclick").click(function () {
+
+        var username = $("#username").val();
+        console.log("username " + username);
+
+        var password = $("#password").val();
+        console.log("password  " + password);
+
+
+        if (
+            username !== "" && password !== "" ||
+            username === "kalis" && password === "welcome"
+        ) {
+            console.log("weldone");
+            $("#demo").html("sucess");
+
+        } else {
+            if (password === "" && username === "") {
+                console.log("please fill the username and password")
+                $("#demo").html("please fill the username and password");
+                $("#invalid_username").html("");
+                $("#invalid_password").html("");
+            } else if (username === "") {
+                console.log("invalid username");
+                $("#invalid_username").html("invalid username");
+            } else if (password === "") {
+                console.log("invalid password");
+                $("#invalid_password").html("invalid password");
+            }
+        }
+
+    });
+</script>
+</body>
+
+</html>
