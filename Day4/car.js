@@ -1,4 +1,4 @@
-alert("hi");
+
 let car_value = "";
   let bike_value = "";
   let van_value = "";
