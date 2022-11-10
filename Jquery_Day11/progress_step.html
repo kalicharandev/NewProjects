@@ -31,11 +31,11 @@
             var progressBar = {
   Bar : $('#progress-bar'),
 
-//   Reset : function(){
-//     if (this.Bar){
-//       this.Bar.find('li').removeClass('active'); 
-//     }
- // },
+  Reset : function(){
+    if (this.Bar){
+      this.Bar.find('li').removeClass('active'); 
+    }
+ },
   Next: function(){
     $('#progress-bar li:not(.active):first').addClass('active');
   },
@@ -52,9 +52,9 @@ $("#Next").on('click', function(){
 $("#Back").on('click', function(){
   progressBar.Back();
 })
-// $("#Reset").on('click', function(){
-//   progressBar.Reset();
-// })
+$("#Reset").on('click', function(){
+  progressBar.Reset();
+})
          </script>
     </body>
     </head>
