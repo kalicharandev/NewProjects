@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  
+      <link rel="stylesheet" href="range.css">
+    
+    
+  </head>
 <body>
-
-<h2>marks</h2>
+<div id="range-container">
+<h2>MARKS</h2>
 <h2>Chemistry</h2>
 <input type="range" id="chemistry" oninput="cheRange()">
 <input type="text" id="chemistry_text">
@@ -20,6 +26,7 @@
 <input type="text" id="english_text"><br><br>
 <button type="submit" onclick="calFunction()">calculate</button>
 <p id="calculate"></p>
+</div>
 <script>
 
 
@@ -74,7 +81,7 @@ function calFunction()
 {
   var calculator = parseInt(chemi_value) +  parseInt(maths_value)  + parseInt(phys_value) +  parseInt(computer_value) +  parseInt(english_value);
 
-  document.getElementById("calculate").innerHTML = calculator;
+  document.getElementById("calculate").innerHTML = `The Total : ${calculator}`;
 }
 </script>
 

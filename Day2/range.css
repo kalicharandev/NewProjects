@@ -1,0 +1,41 @@
+body{
+  background-color: rgba(27, 185, 233, 0.815);
+  margin: 26px;
+  padding: 32px;
+}
+#range-container{
+    display: grid;
+    justify-content: center;  
+    background:  deeppink linear-gradient(22deg, deeppink , aqua, dodgerblue) fixed;
+	  text-shadow: 0 1px 1px hsl(0 0% 0% / 20%);  
+    align-items: center;
+    overflow: hidden;
+   
+}
+h2{
+  color:black;
+}
+
+
+
+input[type="range"] 
+{
+  accent-color: limegreen;
+}
+input[type="range"]:active{
+  color:darkgreen;
+}
+
+  button{
+
+    background-color: hsl(0deg 0% 0% / 9%);
+    border-radius: 10px;
+    color: cyan;
+    font-size: 25px;
+
+  }
+  #calculate{
+    color: darkblue;
+    font-size:30px;
+  }
+		
