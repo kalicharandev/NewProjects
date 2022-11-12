@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        async function successFn() {
+
+            let response = {
+                "id" : 123,
+                "name" : "js"
+            }
+            let p =  Promise.resolve(response);
+           // console.log(p);
+           return Promise.resolve(response);
+        }
+
+        async function failureFn() {
+            return Promise.reject("Error");
+        }
+
+
+        successFn().then(
+  result => {
+    console.log(result.id);
+
+    let resultId = result.id;
+    let resultName = result.name;
+    if(resultId == 123){
+        console.log("Expected id")
+    }else{
+        console.log("Unexpected")
+    }
+  }, // shows "done!" after 1 second
+  error => alert(error) // doesn't run
+);
+
+        </script>
+
+</head>
+
+<body>
+   <p> Sample Promise with resolve and reject</p>
+</body>
+</html>
