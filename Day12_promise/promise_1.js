@@ -9,6 +9,13 @@ async function getFlightsInformation(flightId){
     const flightData = await flightResponse.json();
    return flightData;
 }
+async function getDetails() {
+  const lanuches = await myLanuches() 
+
+  console.log(lanuches);
+  return lanuches;
+
+}
 function getAdd(){
      myLanuches().then( launchData=>  
     {
@@ -41,6 +48,7 @@ function getAdd(){
           console.log("launch_window:"+flightData.launch_window);
           let rocketInfo =  flightData.rocket;
           console.log("rocketInfo:"+rocketInfo.rocket_id);
+
         console.log("rocket_name:" + rocketInfo.rocket_name);
         console.log("rocket_type:" + rocketInfo.rocket_type);
         let coresInfo = flightData.rocket.first_stage.cores;
@@ -71,6 +79,8 @@ function getAdd(){
       console.log("payloads:" + getLayout[z]. payload_id);
       console.log("payloads:" + getLayout[z]. customers);
       console.log("orbit_params:" + getLayout[z].orbit_params.reference_system)
+      console.log("launch_site:" + flightData.launch_site.site_name);
+       console.log("launch_success:" + flightData.launch_site.site_id);
      }
 
  
