@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body{
+                background-color: antiquewhite;
+                margin-left: 600px;
+                padding:30px;
+                font-size: 30px;
+
+            }
+            button{
+             background-color: blueviolet;
+             border-radius: 6px;
+             font-size: 20px;
+            }
+        </style>
         <script>
             function getJsonData(){
         const date = document.getElementById("json_txt").value;
@@ -16,7 +30,7 @@
         </script>
     </head>
     <body>
-        <label for="json_txt">json data</label><br>
+        <label for="json_txt">JSON DATA</label><br>
 
         <input type="text" id="json_txt"><br><br>
         <button type="submit" onclick="getJsonData()">Check_It</button>

@@ -26,8 +26,8 @@ const projectsData = [
 },
 {
     "id" : "Day5",
-    "name": ["HTML checkbox GobalVariable"],
-"demourl": ["../Day5/checkbox_nogobalvar.html"],
+    "name": ["HTML checkbox Checked"],
+"demourl": ["../Day5/checkbox_checked.html"],
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day5",
 },
 {
@@ -63,8 +63,8 @@ const projectsData = [
 {
     "id" : "Day11((JS converted into Jquery))",
     "name": ["login form","Rate Item","progress Step"],
-"demourl": ["../Jquery_Day11/Login.html", "../Jquery_Day11/rate.html","../Jquery_Day11/progress_step.html"],
-"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Jquery_Day11",
+"demourl": ["../Day11_Jquery/Login.html", "../Day11_Jquery/rate.html","../Day11_Jquery/progress_step.html"],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day11_Jquery",
 },
 ];
  let  TableDisplayer ="";
@@ -73,6 +73,8 @@ for (let i = 0; i < projectsData.length; i++) {
     console.log(projectsData[i]);
 
     let projectsName = projectsData[i].name;
+
+    
     let nameListHtml =  "";
     
     for(let j = 0;  j < projectsName.length; j++){

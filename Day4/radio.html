@@ -3,7 +3,11 @@
 -->
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="radio.css">
+</head>
 <body>
+    <div id="container">
     <p>Please select your age:</p>
     <input type="radio" id="boy" name="gender" value="male" oninput="boyGend()">
     <label for="boy">male</label>
@@ -17,6 +21,7 @@
   <input type="text" id="trans_txt"><br><br>
   <button type ="submit" onclick="myGender()">submit</button>
   <p id="gender_id"></p>
+   </div>
   <script>
     // let boy_value = "";
     // let girl_value = "";
@@ -71,7 +76,8 @@ function myGender(){
     if(boyElement.checked){
         genderValue += boyElement.value;
         console.log("genderValue" + genderValue);
-    }
+    } 
+    
 
     let girlElement = document.getElementById("girl");
     console.log("girl" + girlElement.checked);

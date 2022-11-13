@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            body{
+                background-color: rgba(236, 160, 67, 0.968);
+            }
+            #container{
+                    background-color: rgb(237, 180, 9);
+                    margin-left: 500px;
+                    padding: 55px;
+                        width: 25%;
+                        font-size: x-large;               
+                     }
+                     button{
+                        background-color: tomato;
+                        font-size: 15px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        
+                     }
+                     button:hover{
+                        background-position: right center;
+                            color:rgba(208, 11, 11, 0.811);
+                            text-decoration: none;
+
+                     }
+
+        </style>
         <script>
             function convertCtoF() {
                 let celsius = document.getElementById("celsius").value;
@@ -14,10 +40,12 @@
     </script>
     </head>
 <body>
+    <div id="container">
     <p>JavaScript</p>
-    <input type="text" id="celsius" value="">   
-    <button type="submit" onclick="convertCtoF()">clickit</button> 
-    <input type="text" id="fahrenheit" value="">    
+    <input type="text" id="celsius" value="" placeholder="Enter a Celsius"> 
+    <button type="submit" onclick="convertCtoF()">clickit</button> <br><br>
+    <input type="text" id="fahrenheit" value="" placeholder="Get Fahrenheit">    
+</div>
     </body>
 </html>
 
