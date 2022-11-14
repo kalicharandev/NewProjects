@@ -11,7 +11,9 @@ function getEventCommit(){
 
         for(let i = 0; i < data.length; i++){
 
-          const {commits} = data[i].payload;
+         const {commits} = data[i].payload;
+
+         
 
         for (let j = 0; j < commits.length; j++) {
            

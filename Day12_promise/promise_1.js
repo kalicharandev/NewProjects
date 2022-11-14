@@ -9,13 +9,9 @@ async function getFlightsInformation(flightId){
     const flightData = await flightResponse.json();
    return flightData;
 }
-async function getDetails() {
-  const lanuches = await myLanuches() 
 
-  console.log(lanuches);
-  return lanuches;
 
-}
+
 function getAdd(){
      myLanuches().then( launchData=>  
     {

@@ -3,48 +3,34 @@
     <head>
       <style>
         body{
-          background-color: antiquewhite;
+          background-color: rgb(247, 185, 105);
+          margin-left: 600px;
+        }
+        p{
+          color:darkorchid;
+          font-size: 25px;
         }
       </style>
         <script>
-            function factorialize(num) {
+            function factorialize() {
+              let value_id = document.getElementById("value_id").value;
   let product = 1;
-  for (let i = 2; i <= num; i++) {
-    product *= i;
+  for (let i = 1; i <= value_id; i++) {
+    product = product * i;
+
   }
-  return product;
+  console.log(value_id + '! = ' + product);
+document.getElementById("factorial_id").innerHTML = "The factorial is:" + product;
 }
 
-factorialize(5);
-//             function factorialize(num) {
-//                 alert("factorialize");
-  
-//                 let factorialValue = 1;
 
-//                 if(num == 0){
-//                     factorialValue =1;
-//                 }else{
-//                     for (var i = 1; i <= num; i++) {
-//     console.log(i);
-//     factorialValue *=  i;
-
-// }
-
-// console.log(factorialValue);
-// return factorialValue;
-
-//                 }
-        
-                
-//   return num;
-// }
-
-//factorialize(5);
 </script>
 </head>
 <body>
-  <h2>factorial</h2>   
-    <button type="submit" onclick="factorialize(5)">submit</button>
+  <h2>Factorial</h2>   
+    <input type="text" id="value_id">
+    <button type="submit" onclick="factorialize()">submit</button>
+    <p id="factorial_id"></p>
 </body>
 
 </html>

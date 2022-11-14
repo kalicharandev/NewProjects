@@ -1,4 +1,4 @@
- async function myFlight(){
+ function myFlight(){
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
@@ -8,7 +8,7 @@
       // const launchData = await launchResponse.json();
 
 
-      await fetch("https://api.spacexdata.com/v3/launches", requestOptions)
+     fetch("https://api.spacexdata.com/v3/launches", requestOptions)
         .then(response =>  response.json()
         .then( data=>{
        console.log(data);
