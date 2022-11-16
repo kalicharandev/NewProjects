@@ -18,7 +18,8 @@ function getUppercase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65)
 }
 function getNumber() {
-return numbers[Math.floor(Math.random() * numbers.length)];
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48)
+
 }
 function getSymbol() {
 return symbol[Math.floor(Math.random() * symbol.length)];
