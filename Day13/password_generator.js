@@ -1,6 +1,6 @@
 const PwEl = document.getElementById("pw");
 const copyEl = document.getElementById("copy");
-const lenEl = document.getElementById("len");
+const lenEl = document.getElementById("length");
 const upperEl = document.getElementById("upper");
 const lowerEl = document.getElementById("lower");
 const symbolEl = document.getElementById("symbol");
@@ -24,6 +24,7 @@ function getNumber() {
 function getSymbol() {
 return symbol[Math.floor(Math.random() * symbol.length)];
 }
+
 function generatePassword() {
 const len = lenEl.value;
 let password = "";
@@ -31,26 +32,41 @@ for (let i = 0; i < len; i++) {
 const x = generateX();
 password += x;
 }
+console.log("..." + password);
+
 PwEl.innerText = password;
 }
 function generateX() {
-const xs = [];
+const arr = [];
 if (upperEl.checked) {
-xs.push(getUppercase());
+arr.push(getUppercase());
+console.log("upper:" + arr);
 }
 if (lowerEl.checked) {
-xs.push(getLowercase());
+arr.push(getLowercase());
+console.log("lower:" + arr);
 }
 if (numberEl.checked) {
-xs.push(getNumber());
+arr.push(getNumber());
+console.log("number:" + arr);
 }
 if (symbolEl.checked) {
-xs.push(getSymbol());
+arr.push(getSymbol());
+console.log("symbol:" + arr);
 }
-if (xs.length === 0) return "";
-return xs[Math.floor(Math.random() * xs.length)];
+if (arr.length === 0) return "";
+let finallarr = arr[Math.floor(Math.random() * arr.length)];
+console.log("finallarr" + finallarr);
+return finallarr;
+
+
+
 }
+
+
 generateEl.addEventListener("click", generatePassword);
+
+
 copyEl.addEventListener("click", () => {
 const textarea = document.createElement("textarea");
 const password = PwEl.innerText;
