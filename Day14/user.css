@@ -1,0 +1,23 @@
+    body{
+        background-color: rgba(232, 136, 19, 0.968);
+    }
+    .output_container{
+            background-color: rgba(239, 9, 21, 0.409);
+            margin-left: 500px;
+            padding: 55px;
+                width: 25%;
+                font-size: x-large;               
+             }
+             #submit{
+                background-color: tomato;
+                font-size: 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                
+             }
+             #submit:hover{
+                background-position: right center;
+                    color:cadetblue;
+                    text-decoration: none;
+
+             }
