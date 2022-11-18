@@ -1,51 +1,24 @@
-const smallCups = document.querySelectorAll('.cup-small')
-const liters = document.getElementById('liters')
-const percentage = document.getElementById('percentage')
-const remained = document.getElementById('remained')
+let result =  document.getElementById("value");
+let count = 0
 
-updateBigCup()
-
-smallCups.forEach((cup, idx) => {
-    cup.addEventListener('click', () => highlightCups(idx))
-})
-
-function highlightCups(idx) {
-    if (idx===7 && smallCups[idx].classList.contains("full")) idx--;
-    else if(smallCups[idx].classList.contains('full') && !smallCups[idx].nextElementSibling.classList.contains('full')) {
-        idx--
-    }
-
-    smallCups.forEach((cup, idx2) => {
-        if(idx2 <= idx) {
-            cup.classList.add('full')
-        } else {
-            cup.classList.remove('full')
-        }
-    })
-        console
-    updateBigCup()
+function getWater1(){
+let water1 = document.getElementById("water1");
+count += 1;
+result.innerHTML = count;
 }
+function getWater2(){
+    let water2 = document.getElementById("water2");
+    count += 1;
+    result.innerHTML = count;
+}
+function getWater3(){
+    let water3 = document.getElementById("water3");
+    count += 1;
+    result.innerHTML = count;
+}
+function getWater4(){
+    let water4 = document.getElementById("water4");
+    count += 1;
+    result.innerHTML = count;
 
-function updateBigCup() {
-    const fullCups = document.querySelectorAll('.cup-small.full').length
-    console.log("fullcups:" + fullCups );
-    const totalCups = smallCups.length
-     console.log("totalcups:" +totalCups);
-    if(fullCups === 0) {
-        percentage.style.visibility = 'hidden'
-        percentage.style.height = 0
-    } else {
-        percentage.style.visibility = 'visible'
-        percentage.style.height = `${fullCups / totalCups * 330}px`
-        percentage.innerText = `${fullCups / totalCups * 100}%`
-        console.log(`percentage: ${fullCups / totalCups * 100}%`);
-    }
-
-    if(fullCups === totalCups) {
-        remained.style.visibility = 'hidden'
-        remained.style.height = 0
-    } else {
-        remained.style.visibility = 'visible'
-        liters.innerText = `${2 - (250 * fullCups / 1000)}L`
-    }
 }
