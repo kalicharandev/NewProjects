@@ -21,3 +21,7 @@
                     text-decoration: none;
 
              }
+             #displayer{
+                color: red;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+             }

@@ -67,7 +67,8 @@ const projectsData = [
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day11_Jquery",
 },
 ];
- let  TableDisplayer ="";
+ let  TableDisplayer = `<div class="output-container">
+ <table>`;
 
 for (let i = 0; i < projectsData.length; i++) {
     console.log(projectsData[i]);
@@ -91,36 +92,23 @@ for (let i = 0; i < projectsData.length; i++) {
     }
 
 
-   TableDisplayer += ` <div class="output-container">
-                   <table>
+   TableDisplayer += `
                 
-                   <tr>
+                   <tr> 
             <td>${projectsData[i].id}</td>
-            <ul>
+           
             <td>
-                ${nameListHtml}            
+                <ul>
+                ${nameListHtml} 
+                </ul>           
             </td>
             <td>
-             ${demoUrlListHtml}
+                <ul> ${demoUrlListHtml} </ul>
             </td>
             <td><a href="${projectsData[i].repourl}"   target="_blank">  View Repository</a></td>
-          </ul>
-          </tr>
-          
-                   </table>
-   
-               </div>
-   
-   
-   
-   
-   
+             </tr>
    `
 }
+TableDisplayer += `</table></div>`
 document.getElementById("jscontainer").innerHTML = TableDisplayer;
            
-
-                         
-                            
-
-

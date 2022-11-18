@@ -21,13 +21,13 @@ $("#submit").click(function(){
         
     }
 
-
+      console.log(`isValidPassword:${isValidPassword}`);
 
      if(firstname && lastname && isValidPassword ){
-        $("#displayer").html("success");
+        $("#displayer").html("Success");
         console.log(`firstname : ${firstname} lastname: ${lastname} password: ${isValidPassword}`);
     }else{
-        $("#displayer").html("failed");
+        $("#displayer").html("Failed");
         console.log("failed");
     }
 });    
