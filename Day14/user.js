@@ -1,33 +1,33 @@
-function getLogin(){
+$("#submit").click(function(){
     let regex = /^[A-Za-z]+$/;
-    let fname = document.getElementById("fname").value;
-    console.log("fname - " + fname);
+    let fname = $("#fname").val();
+    console.log(`fname: ${fname}`);
 
     let firstname = regex.test(fname);
-    console.log("firstname - " + firstname );
+    console.log(`firstname: ${firstname}`);
 
-    var lname = document.getElementById("lname").value;
-    console.log("lname - " + lname);
+    var lname = $("#lname").val();
+    console.log(`lname: ${lname}`);
 
     let lastname = regex.test(lname);
-    console.log("lastname" + lastname);
+    console.log(`lastname: ${lastname}`);
 
-    var pword = document.getElementById("pword").value;
-    console.log("password" + pword);
+    var pword = $("#pword").val();
+    console.log(`password-: ${pword}`);
 
     let isValidPassword = false ;
     if(pword.length > 10){
         isValidPassword = true;
+        
     }
 
 
 
      if(firstname && lastname && isValidPassword ){
-        document.getElementById("displayer").innerHTML = "success"
-        console.log("success" + firstname);
-        console.log("success" + lastname);
+        $("#displayer").html("success");
+        console.log(`firstname : ${firstname} lastname: ${lastname} password: ${isValidPassword}`);
     }else{
-        document.getElementById("displayer").innerHTML = "failed"
+        $("#displayer").html("failed");
         console.log("failed");
     }
-}
+});    
