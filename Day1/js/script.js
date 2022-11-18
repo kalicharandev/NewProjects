@@ -91,7 +91,6 @@ for (let i = 0; i < projectsData.length; i++) {
         demoUrlListHtml += `<li> <a href="${demoUrls[k]}"  target="_blank">  View Demo</a></li>`;
     }
 
-
    TableDisplayer += `
                 
                    <tr> 
@@ -111,4 +110,3 @@ for (let i = 0; i < projectsData.length; i++) {
 }
 TableDisplayer += `</table></div>`
 document.getElementById("jscontainer").innerHTML = TableDisplayer;
-           
