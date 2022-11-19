@@ -30,7 +30,6 @@ function getAdd(){
 
             console.log("flightData..." + JSON.stringify(flightData));
              let filghtNumber ="";
-            
 
            console.log("Mission Name" + flightData.launch_window);
            console.log("mission name:" + flightData.mission_name);
@@ -45,7 +44,6 @@ function getAdd(){
           console.log("launch_window:"+flightData.launch_window);
           let rocketInfo =  flightData.rocket;
           console.log("rocketInfo:"+rocketInfo.rocket_id);
-         
 
         console.log("rocket_name:" + rocketInfo.rocket_name);
         console.log("rocket_type:" + rocketInfo.rocket_type);
@@ -80,21 +78,26 @@ function getAdd(){
       console.log("launch_site:" + flightData.launch_site.site_name);
        console.log("launch_success:" + flightData.launch_site.site_id);
      }
-     filghtNumber += `<div container="finalContainer">
-     <p id= "flight_number>${flightData}</p>
-                 </div>`
 
-}
-document.getElementById("numbers").innerHTML = filghtNumber;
+ 
+     }
+           
+          //  filghtNumber += `<div container="finalContainer">
+          //                   <p id= "flight_number>${flightData}</p>
+          //  </div>`
+             
 
-    }).catch(error => console.log(error))
+
+        
+          //  document.getElementById("numbers").innerHTML = filghtNumber;
+        }).catch(error => console.log(error))
 
        
 
         
      
-     
-    launchesList += `<div id="outputcontainer">
+
+     launchesList += `<div id="outputcontainer">
      <p id="flight_data">${launchData[i].flight_number}</p><br>
      <p id="flight_data">${launchData[i].launch_year}</p><br>
 
@@ -107,6 +110,6 @@ document.getElementById("numbers").innerHTML = filghtNumber;
     });//.catch(error => console.log("Error Occurred :" + error))
     
     
-    }
+}
 
 
