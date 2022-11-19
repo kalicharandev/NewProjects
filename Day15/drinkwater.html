@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+    body{
+     background-color: blue;
+     padding:30px;
+     margin-left: 35%;
+    }
+    button{
+      background-color: aquamarine;
+    }
+    #value{
+      margin-left: 83px;
+    padding: 25px;
+    color: #12e0e9   
+   }
+  </style>
     </head>
     <body>
-      <button type="button" id="water1" onclick="getWater1()">water1</button>
-      <button type="button" id="water2" onclick="getWater2()">water2</button>
-      <button type="button" id="water3" onclick="getWater3()">water3</button>
-      <button type="button" id="water4" onclick="getWater4()">water4</button>
+    <div id="container">
+      <button type="button" id="water1" onclick="getWaterLevel(1)">water1</button>
+      <button type="button" id="water2" onclick="getWaterLevel(2)">water2</button>
+      <button type="button" id="water3" onclick="getWaterLevel(3)">water3</button>
+      <button type="button" id="water4" onclick="getWaterLevel(4)">water4</button>
       <p id="value"></p>
+    </div>
       <script src="drinkwater.js"></script>
     </body>
   </body>
