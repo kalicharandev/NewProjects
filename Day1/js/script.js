@@ -66,6 +66,30 @@ const projectsData = [
 "demourl": ["../Day11_Jquery/Login.html", "../Day11_Jquery/rate.html","../Day11_Jquery/progress_step.html"],
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day11_Jquery",
 },
+{
+    "id" : "Day12",
+    "name": ["promise"],
+"demourl": [ "../Day12_promise/promise_1.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day12_promise",
+},
+{
+    "id" : "Day13",
+    "name": ["password generator"],
+"demourl": [ "../Day13/password_generator.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day13",
+},
+{
+    "id" : "Day14",
+    "name": ["username(regex vaildation)"],
+"demourl": [ "../Day14/user.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day14",
+},
+{
+    "id" : "Day15",
+    "name": ["Drink Water Level "],
+"demourl": [ "../Day15/drinkwater.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day15",
+},
 ];
  let  TableDisplayer = `<div class="output-container">
  <table>`;

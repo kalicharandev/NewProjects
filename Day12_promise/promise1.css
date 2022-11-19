@@ -10,16 +10,17 @@ body{
     width: 100%;
     display: grid;
     place-items: center;
-    background: #ed5503;
+    background: #ed7e03cf;
 }
 .search-area{
+    border-radius: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90px;
-    width: 195px;
-    background: rgb(253 133 35 / 87%);
-    border-radius: 35px;
+    height: 102px;
+    width: 336px;
+    background: #bfe20d
+    
 }
 
 .search-area button{
@@ -39,7 +40,8 @@ body{
     width: 320px;
     background: #d0dc12c9;
     margin: 14px;
-    border-radius: 13px
+    border-radius: 13px;
+    font-weight: bolder;
     
 }
 .filght_number{
@@ -48,8 +50,7 @@ body{
     font-weight: 600;
     margin-left: 245px;
     width: 500px;
-    color: rgba(0, 0, 0, 0.97);
+    color: #663399;
     margin-top: 75px;
-    background-color: rgb(196, 42, 42);
-    padding: 30px;
+        padding: 30px;
 } 
