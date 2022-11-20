@@ -90,6 +90,18 @@ const projectsData = [
 "demourl": [ "../Day15/drinkwater.html" ],
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day15",
 },
+{
+    "id" : "Day16",
+    "name": ["Tailwind css"],
+"demourl": [ "../Day16/index.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day16",
+},
+{
+    "id" : "Day17",
+    "name": ["Bill spliter"],
+"demourl": [ "../Day17/split_counter.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day17",
+},
 ];
  let  TableDisplayer = `<div class="output-container">
  <table>`;
