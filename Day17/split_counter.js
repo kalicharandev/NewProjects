@@ -1,4 +1,3 @@
-
 function buttonTip() {
     console.log("welcome");
     const divinput = document.getElementById("tipInput");
@@ -12,6 +11,7 @@ function buttonTip() {
   }
 
 }
+
 
 
  function getSplit(){

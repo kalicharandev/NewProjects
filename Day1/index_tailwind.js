@@ -1,4 +1,3 @@
-
 const projectsData = [
     {
         "id" : "Day1",
@@ -109,46 +108,42 @@ const projectsData = [
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day18",
 },
 ];
- let  TableDisplayer = `<div class="output-container">
- <table>`;
-
+ let  TableDisplayer = `<div class=" m-2 bg-gray-100">
+ 				<table class="m-5 p-5">`;
 for (let i = 0; i < projectsData.length; i++) {
     console.log(projectsData[i]);
 
     let projectsName = projectsData[i].name;
 
-    
     let nameListHtml =  "";
     
     for(let j = 0;  j < projectsName.length; j++){
-        nameListHtml += `<li>${projectsName[j]}</li>`; 
+        nameListHtml += `<li class="font-bold m-3">${projectsName[j]}</li>`; 
     }
 
-    let demoUrls = projectsData[i].demourl;
-       
-    
+    let demoUrls = projectsData[i].demourl;    
     let demoUrlListHtml = "";
 
     for (let k = 0; k < demoUrls.length; k++){
-        demoUrlListHtml += `<li> <a href="${demoUrls[k]}"  target="_blank">  View Demo</a></li>`;
+        demoUrlListHtml += `<li class="m-3">
+                              <a href="${demoUrls[k]}"  target="_blank" class="bg-purple-600 p-1 rounded text-white text-sm">  View Demo</a>
+       										 </li>`;
     }
 
    TableDisplayer += `
-                
-                   <tr> 
-            <td>${projectsData[i].id}</td>
-           
-            <td>
-                <ul>
-                ${nameListHtml} 
-                </ul>           
-            </td>
-            <td>
-                <ul> ${demoUrlListHtml} </ul>
-            </td>
-            <td><a href="${projectsData[i].repourl}"   target="_blank">  View Repository</a></td>
-             </tr>
-   `
+            <tr class="p-2 m-5 border-b-2"> 
+            	<td class="p-2 m-5">${projectsData[i].id}</td>
+              <td class="p-2 m-5">
+                  <ul>
+                  ${nameListHtml} 
+                  </ul>           
+              </td>
+              <td class="p-2 m-5">
+                  <ul> ${demoUrlListHtml} </ul>
+              </td>
+              <td><a href="${projectsData[i].repourl}"   target="_blank" class="bg-purple-600 p-1 rounded text-white text-sm">  View Repository</a></td>
+             </tr>`;
 }
-TableDisplayer += `</table></div>`
+TableDisplayer += `	</table>
+									</div>`
 document.getElementById("jscontainer").innerHTML = TableDisplayer;
