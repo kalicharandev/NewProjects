@@ -14,13 +14,11 @@ input {
 .split_container{
     margin-left: 500px;
     width: 40%;
-    background-color: darkgrey;
+    background-color: rgba(169, 169, 169, 0.879);
     padding: 46px;
 }
 button{
     margin-top: 1rem;
-	outline: none;
-	border: none;
 	padding: 1rem 2rem;
 	border-radius: 2rem;
 	font-size: 1rem;
@@ -36,4 +34,18 @@ p{
     margin-left: 30px;
     color: black;
     font-weight: bold;
+}
+#addTip {
+    border: none;
+    background-color: rgb(167 167 169);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: rgb(61, 135, 111);
+    font-family: 'Lora', serif;
+  }
+  #addTip:hover {
+    color: rgb(86, 161, 86);
+  }
+#tipInput{
+    display: none;
 }

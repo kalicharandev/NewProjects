@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="waterLevel.js"></script>
+    <style>
+        * {
+             box-sizing: border-box;
+             }
+        body{
+            background-color: #fff;
+        }
+         #container{
+            background-color: #144fc6;
+            height:7.5cm;
+            width:155px;
+            margin: auto;
+        
+    
+         }
+         div{
+            font-size: 60px;
+         }
+         #water1{
+            display: none;
+            background: #6ab3f8;
+            color:black;
+         }#water2{
+            display: none;
+            background: #6ab3f8;
+            color:black;
+         }#water3{
+            display: none;
+            background: #6ab3f8;
+            color:black;
+         }#water4{
+            display: none;
+            background: #6ab3f8;
+            color:black;
+         }
+         button{
+            margin:288px 0;
+         }
+
+      </style>
+      <body>
+        <div id="container">
+            <div id="water1">1L</div>
+            <div id="water2">750ml</div>
+            <div id="water3">500ml</div>
+            <div id="water4">250ml</div>
+            <button id="watervalue" onclick="getWaterLevel()">getWaterLevel</button>
+        </div>
+    
+      </body>
+      </head>
