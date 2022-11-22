@@ -108,6 +108,12 @@ const projectsData = [
 "demourl": [ "../Day18/waterLevel.html" ],
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day18",
 },
+{
+"id" : "Day19",
+    "name": ["NEWS (JSON object)"],
+"demourl": [ "../Day19/news.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day19",
+},
 ];
  let  TableDisplayer = `<div class="output-container">
  <table>`;
