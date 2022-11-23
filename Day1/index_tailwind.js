@@ -145,5 +145,12 @@ for (let i = 0; i < projectsData.length; i++) {
              </tr>`;
 }
 TableDisplayer += `	</table>
-									</div>`
-document.getElementById("jscontainer").innerHTML = TableDisplayer;
+									</div>`;
+
+    let jsContainerElement = document.getElementById("jscontainer");
+    alert( "if.." + jsContainerElement);
+
+    if(jsContainerElement){
+        document.getElementById("jscontainer").innerHTML = TableDisplayer;
+    }
+
