@@ -97,7 +97,7 @@ const projectsData = [
 },
 {
     "id" : "Day17",
-    "name": ["Bill spliter"],
+    "name": ["Bill splitter"],
 "demourl": [ "../Day17/split_counter.html" ],
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day17",
 },
@@ -106,6 +106,12 @@ const projectsData = [
     "name": ["water Level"],
 "demourl": [ "../Day18/waterLevel.html" ],
 "repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day18",
+},
+{
+    "id" : "Day19",
+    "name": ["news(JSON objects"],
+"demourl": [ "../Day19/news.html" ],
+"repourl": "https://github.com/kalicharandev/NewProjects/tree/main/Day19",
 },
 ];
  let  TableDisplayer = `<div class=" m-2 bg-gray-100">
@@ -148,9 +154,5 @@ TableDisplayer += `	</table>
 									</div>`;
 
     let jsContainerElement = document.getElementById("jscontainer");
-    alert( "if.." + jsContainerElement);
-
-    if(jsContainerElement){
-        document.getElementById("jscontainer").innerHTML = TableDisplayer;
-    }
+        jsContainerElement.innerHTML = TableDisplayer;
 

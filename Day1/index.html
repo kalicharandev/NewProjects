@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-
-body{
-        background-color: rgba(11, 35, 123, 0.605);
-        display: flex;
-    
-     align-items: flex-start;
-     justify-content: center;
-     height: 100vh;
-  
-      }
-      #jscontainer{
-        margin: 0;
-        background-color: #fff4f4cb;
-        padding: 20px 40px;
-        border-radius: 5px;
+<head>
+    <script>
+    window.onload = function() {
+        var scriptElement = document.createElement('script');
+         scriptElement.type = 'text/javascript';
+         scriptElement.src = "index_tailwind.js";
+        document.head.appendChild(scriptElement); 
         
-      }
-          
-      table tr td{
-        
-        border:  solid;
-        width: 250px;
-        height:52px ;
-       }
-    
-            
-        </style>
-        </head>
-  <body>
-    
-<div id="jscontainer">
-      </div>
+    };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script> --> 
 
-
-    <script src="./js/script.js"></script>
-    </body>
-    </html>
-  
+</head>
+<body class="bg-neutral-800">
+<div id="jscontainer" class="bg-white m-2 p-2">
+</div>
+</body>
+</html>
