@@ -50,7 +50,7 @@ ul {
 
 body {
   font: 1rem/1.3 "Roboto", sans-serif;
-  background: var(--darkred);  
+  background-color: #ffff;  
   color: var(--text_dark);
   padding: 70px;
 }
@@ -60,13 +60,18 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  background-color: rgb(211, 211, 211);
+}
+.top-container{
+  margin-left: 150px;
+
 }
 
 
 /* SECTION #1
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .top-banner {
-  color: var(--text_light);
+  color: black;
 }
 
 .heading {
@@ -100,12 +105,12 @@ body {
   padding: 15px 20px;
   margin-left: 15px;
   border-radius: 5px;
-  background: var(--text_med);
+  background-color: darkgray;
   transition: backgr ound 0.3s ease-in-out;
 }
 
 .top-banner form button:hover {
-  background: var(--darkred);
+  background-color: gray;
 }
 
 .top-banner form .msg {
@@ -263,7 +268,7 @@ body {
 /* API Key banner
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .api {
-  background: #fffbbc;
+  background: #ffff;
   position: fixed;
   top: 0;
   left: 0;
